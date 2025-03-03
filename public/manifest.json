@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "focus",
+  "description": " help you focus while using youtube to watch video",
+  "version": "0.1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "client.js"
+      ],
+      "matches": [
+        "http://*.youtube.com/*"
+      ]
+    }
+  ],
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-16.png",
+    "48": "icon-16.png",
+    "128": "icon-16.png"
+  }
+}
